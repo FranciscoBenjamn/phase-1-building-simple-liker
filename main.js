@@ -4,6 +4,18 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+let modal = document.querySelector('.hidden')
+let modalText = document.querySelector('.modal-text')
+let modalButton = document.querySelector('.modal-button')
+modalButton.addEventListener('click', function() {
+  modal.classList.add('hidden')
+} 
+
+  // This function will be used to display the modal.
+  ,function displayModal() {
+    modal.classList.remove('hidden')
+  }
+)
 
 
 
@@ -11,7 +23,7 @@ const FULL_HEART = '♥'
 // Don't change the code below: this function mocks the server response
 //------------------------------------------------------------------------------
 
-function mimicServerCall(url="http://mimicServer.example.com", config={}) {
+,function mimicServerCall(url="http://mimicServer.example.com", config={}) {
   return new Promise(function(resolve, reject) {
     setTimeout(function() {
       let isRandomFailure = Math.random() < .2
@@ -22,4 +34,4 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
       }
     }, 300);
   });
-}
+};
